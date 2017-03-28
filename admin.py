@@ -1,14 +1,7 @@
 from django.contrib import admin
-from joins.models import join,uploads
-class joinAdmin(admin.ModelAdmin):
-    
-
-
-    list_display=['f_name','l_name','email','ref_id']
+from quiz.models import quiz
+class quizadmin(admin.ModelAdmin):
+    list_display=['exam','s_no','ans']
     class Meta:
-        model=join
-        
-        
-admin.site.register(join,joinAdmin)
-
-admin.site.register(uploads)
+        model=quiz
+admin.site.register(quiz,quizadmin)
