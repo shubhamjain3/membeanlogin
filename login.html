@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>login
+</title>
+</head>
+<body>
+  {% if form.errors %}
+    <p class="error">Sorry, that's not a valid username or password</p>
+  {% endif %}
+
+  <form action="" method="post">
+    <label for="f_name">f_name:</label>
+    <input type="text" name="f_name">
+    <label for="l_name">Password:</label>
+    <input type="text" name="l_name">
+
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next|escape }}" />
+  </form>
+
+</body>
+
+</html>
